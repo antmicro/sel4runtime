@@ -35,7 +35,8 @@ _start:
 	li ra, 0
 
 	addi  a0, sp, 0
-	jal  ra, __sel4_start_c
+	la x5, __sel4_start_c
+	jalr ra, x5, 0
 
 	/* should not return */
 1:
